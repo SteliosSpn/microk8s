@@ -11,6 +11,7 @@ elif [ "$ARCH" = "armhf" ]; then
 fi
 export KUBE_ARCH
 export ETCD_VERSION="${ETCD_VERSION:-v3.3.4}"
+export FLANNELD_VERSION="${FLANNELD_VERSION:-v0.11.0}"
 export CNI_VERSION="${CNI_VERSION:-v0.7.1}"
 export ISTIO_VERSION="${ISTIO_VERSION:-v1.0.5}"
 # RUNC commit matching the containerd release commit
@@ -35,6 +36,7 @@ export KUBE_SNAP_ROOT="$(readlink -f .)"
 echo "Building with:"
 echo "KUBE_VERSION=${KUBE_VERSION}"
 echo "ETCD_VERSION=${ETCD_VERSION}"
+echo "FLANNELD_VERSION=${FLANNELD_VERSION}"
 echo "CNI_VERSION=${CNI_VERSION}"
 echo "KUBE_ARCH=${KUBE_ARCH}"
 echo "KUBE_SNAP_BINS=${KUBE_SNAP_BINS}"
