@@ -15,6 +15,9 @@ grade: stable
 confinement: classic
 
 apps:
+  daemon-monitoryaml:
+    command: monitoryaml
+    daemon: simple
   daemon-etcd:
     command: run-etcd-with-args
     daemon: simple
