@@ -1,5 +1,7 @@
 #!/bin/bash
 
+export PATH="$SNAP/usr/sbin:$SNAP/usr/bin:$SNAP/sbin:$SNAP/bin:$PATH"
+
 inotifywait -q -m -r -e moved_to --format "%e %w%f" $1 |
   while read evt filepath ; do
     if [[ $filepath == *"yaml" ]]; then        
