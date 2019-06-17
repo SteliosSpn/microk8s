@@ -135,6 +135,7 @@ parts:
     organize:
       containerd/install/bin/*: bin/
     stage-packages:
+    - inotify-tools
     - conntrack
     - aufs-tools
     - gawk

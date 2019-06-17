@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 inotifywait -q -m -r -e moved_to --format "%e %w%f" $1 |
   while read evt filepath ; do
     if [[ $filepath == *"yaml" ]]; then        
